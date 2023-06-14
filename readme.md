@@ -79,13 +79,21 @@ So far the dev experience was great. Fast setup and working example. The lib was
 - The doc is well structured and have a lot of advanced pattern examples to work with.
 - A lot of code example cookbook on their github https://github.com/react-hook-form/react-hook-form/tree/master/examples
 
+Last point the fact they have their own youtube channel is a great tool for dev experience. We all love live coding videos.
+
 ### Formik
 
 #### First feelings
 
-- documentation:
+Stats:
 
-- relative experience:
+- Re created project or forks ? https://github.com/jaredpalmer/formik/releases/tag/formik-native%402.1.24
+- 32k stars on github
+- 649 active issue
+- 122 active PR
+- 418 contributors
+
+Advanced features:
 
 #### Performance
 
