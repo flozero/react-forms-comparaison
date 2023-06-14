@@ -29,7 +29,7 @@ export default function App() {
       <label htmlFor="email">Email</label>
       <input
         id="email"
-        type="text"
+        type="email"
         placeholder="Email"
         {...register("email")}
         aria-invalid={errors.email ? "true" : "false"}
@@ -38,7 +38,7 @@ export default function App() {
       <label htmlFor="password">Password</label>
       <input
         id="password"
-        type="text"
+        type="password"
         placeholder="Password"
         aria-invalid={errors.password ? "true" : "false"}
         {...register("password")}

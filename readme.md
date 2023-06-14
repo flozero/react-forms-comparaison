@@ -72,7 +72,7 @@ The library is providing some example with accessbility improvment in the form. 
 
 #### Dev experience
 
-So far the dev experience was great. Fast setup and working example
+So far the dev experience was great. Fast setup and working example. The lib was build from start using typescript so every examples are really clear and use clear typescript features.
 
 - [Form builder with a GUI](https://www.react-hook-form.com/form-builder/). Interesting but don't show advanced pattern like email if you start from 0 on the form builder.
 - examples come with some good accessibility examples
