@@ -45,7 +45,7 @@ react-hook-form is a relatively newer library but has gained popularity for its 
 Both libraries have good TypeScript support, but react-hook-form has a stronger emphasis on TypeScript and provides better type inference.
 Ultimately, the choice between Formik and react-hook-form depends on your specific project requirements, preferences, and the trade-offs you are willing to make. It's worth exploring the documentation, examples, and community resources of both libraries to determine which one better suits your needs.
 
-### React hook form
+### [React hook form](https://www.react-hook-form.com/)
 
 #### First feelings
 
@@ -57,6 +57,8 @@ Stats:
 - 10 active PR
 - 266 contributors
 - youtube channel: https://www.youtube.com/@bluebill1049
+- 7.57 kb gzip + @hookform/resolvers/zod 1kb
+- zero dependencies (using npm view) or you can use http://npm.anvaka.com/#/view/2d/react-hook-form
 
 Advanced features:
 
@@ -84,7 +86,7 @@ So far the dev experience was great. Fast setup and working example. The lib was
 
 Last point the fact they have their own youtube channel is a great tool for dev experience. We all love live coding videos.
 
-### Formik
+### [Formik](https://formik.org/)
 
 #### First feelings
 
@@ -95,6 +97,15 @@ Stats:
 - 649 active issue
 - 122 active PR
 - 418 contributors
+- 13 kb gzipped
+- dependencies: (using npm view) or you can use http://npm.anvaka.com/#/view/2d/formik
+  - deepmerge: ^2.1.1
+  - lodash-es: ^4.17.21
+  - react-fast-compare: ^2.0.1
+  - tslib: ^1.10.0
+  - hoist-non-react-statics: ^3.3.0
+  - lodash: ^4.17.21
+  - tiny-warning: ^1.0.2
 
 Advanced features:
 
@@ -125,3 +136,18 @@ You will have to use the later doc that showing the same way how react-hook-form
 Their examples don't start with typescript in mind nor speaking about performance
 
 Outside of communities effort there is not videos from their side.
+
+## Conclusion
+
+I didn't use any of them until now. So I am not aware of what it was "before". But `Formik` kind of hide what it was before with their release history. That make me think that they tried to totally rewrite/think what they had done.
+
+Here some notes / feelings that are important to me:
+
+- Formik is not performant by default and components they provide don't handle well accessibility.
+- It feels like they followed what `react-hook-form` to design their apis but without handling the performance in mind still.
+- The doc on `react-hook-form` is better structured and make you available to work on it incrementally and follow what they define as "best practices".
+- I really love that `react-hook-form` have created videos with live coding session.
+- `react-hook-form` make sure you understand what consideration you need to take for accessibility
+- I am a bit concerned about the only one issue on `react-hook-form`. But its probably because their api is way more smaller than `formik` with their gigantic object state.
+- using the pre-build `formik` components are a false good idea because they looks limited really fast and I didn't feel it was giving any clarity.
+- I would also choose a lib with zero dependencies if possible so it will be easier to maintain in future and upgrade versions
