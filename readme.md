@@ -49,6 +49,15 @@ Ultimately, the choice between Formik and react-hook-form depends on your specif
 
 #### First feelings
 
+Stats:
+
+- First stable since 2019 https://github.com/react-hook-form/react-hook-form/releases/tag/v1.0.0
+- 35k stars on github
+- 1 active issue
+- 10 active PR
+- 266 contributors
+- youtube channel: https://www.youtube.com/@bluebill1049
+
 - documentation:
 
 - relative experience:
