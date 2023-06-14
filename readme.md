@@ -80,6 +80,7 @@ So far the dev experience was great. Fast setup and working example. The lib was
 - examples come with some good accessibility examples
 - The doc is well structured and have a lot of advanced pattern examples to work with.
 - A lot of code example cookbook on their github https://github.com/react-hook-form/react-hook-form/tree/master/examples
+- The lib is giving you resolver to use a lot of validation schema tools like yup, zod etc
 
 Last point the fact they have their own youtube channel is a great tool for dev experience. We all love live coding videos.
 
@@ -119,6 +120,7 @@ You will have to use the later doc that showing the same way how react-hook-form
 
 - The doc is first showing a bit incomprehensive examples and without following the "best usage". They show you that
   you can use their components. But slowly move to a react-hook-form approach.
+- I was a bit annoyed to be block to use only `yup` validation to validate the schema of the datas
 
 Their examples don't start with typescript in mind nor speaking about performance
 
