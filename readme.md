@@ -58,9 +58,16 @@ Stats:
 - 266 contributors
 - youtube channel: https://www.youtube.com/@bluebill1049
 
-- documentation:
+Documentation:
 
-- relative experience:
+Relative experience:
+
+- [Form builder with a GUI](https://www.react-hook-form.com/form-builder/). Interesting but don't show advanced pattern like email if you start from 0 on the form builder.
+- examples come with some good accessibility examples
+
+Advanced features:
+
+- you can build your own inputs and connect them with functions from react hook form.
 
 #### Performance
 
