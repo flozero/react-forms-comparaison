@@ -30,6 +30,7 @@ export default function App() {
       <input
         id="email"
         type="email"
+        autoComplete="email"
         placeholder="Email"
         {...register("email")}
         aria-invalid={errors.email ? "true" : "false"}
@@ -40,6 +41,7 @@ export default function App() {
         id="password"
         type="password"
         placeholder="Password"
+        autoComplete="current-password"
         aria-invalid={errors.password ? "true" : "false"}
         {...register("password")}
       />
