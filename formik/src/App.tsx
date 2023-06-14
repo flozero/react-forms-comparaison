@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { z } from "zod";
+// import { z } from "zod";
 import * as Yup from "yup";
 
 // const schema = z
@@ -13,8 +13,13 @@ const schema = Yup.object({
   password: Yup.string().min(8).required(),
 });
 
+type Inputs = {
+  email: string;
+  password: string;
+};
+
 const Basic = () => {
-  const formik = useFormik({
+  const formik = useFormik<Inputs>({
     initialValues: {
       email: "",
       password: "",
