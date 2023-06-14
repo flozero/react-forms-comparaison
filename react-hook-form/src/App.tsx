@@ -26,22 +26,24 @@ export default function App() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Email</label>
+      <label htmlFor="email">Email</label>
       <input
+        id="email"
         type="text"
         placeholder="Email"
         {...register("email")}
         aria-invalid={errors.email ? "true" : "false"}
       />
-      <p>{errors.email?.message}</p>
-      <label>Password</label>
+      <p role="alert">{errors.email?.message}</p>
+      <label htmlFor="password">Password</label>
       <input
+        id="password"
         type="text"
         placeholder="Password"
         aria-invalid={errors.password ? "true" : "false"}
         {...register("password")}
       />
-      <p>{errors.password?.message}</p>
+      <p role="alert">{errors.password?.message}</p>
       <button>Submit</button>
     </form>
   );

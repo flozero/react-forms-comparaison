@@ -58,22 +58,26 @@ Stats:
 - 266 contributors
 - youtube channel: https://www.youtube.com/@bluebill1049
 
-Documentation:
-
-Relative experience:
-
-- [Form builder with a GUI](https://www.react-hook-form.com/form-builder/). Interesting but don't show advanced pattern like email if you start from 0 on the form builder.
-- examples come with some good accessibility examples
-
 Advanced features:
 
 - you can build your own inputs and connect them with functions from react hook form.
 
 #### Performance
 
+Hard to validate performance. But the lib is providing a devtool extension to evaluate the performance of your forms. https://www.react-hook-form.com/dev-tools/
+
 #### Accessibility
 
+The library is providing some example with accessbility improvment in the form. It doesn't give you much more but its fine as it sounds better for the app to handle accessibliity the way they want. But appreciate the few examples.
+
 #### Dev experience
+
+So far the dev experience was great. Fast setup and working example
+
+- [Form builder with a GUI](https://www.react-hook-form.com/form-builder/). Interesting but don't show advanced pattern like email if you start from 0 on the form builder.
+- examples come with some good accessibility examples
+- The doc is well structured and have a lot of advanced pattern examples to work with.
+- A lot of code example cookbook on their github https://github.com/react-hook-form/react-hook-form/tree/master/examples
 
 ### Formik
 
