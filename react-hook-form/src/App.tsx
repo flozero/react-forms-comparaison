@@ -1,16 +1,27 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 
 type Inputs = {
   email: string;
   password: string;
 };
 
+const schema = z
+  .object({
+    email: z.string().email(),
+    password: z.string().min(8),
+  })
+  .required();
+
 export default function App() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({
+    resolver: zodResolver(schema),
+  });
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
@@ -19,28 +30,18 @@ export default function App() {
       <input
         type="text"
         placeholder="Email"
-        {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+        {...register("email")}
         aria-invalid={errors.email ? "true" : "false"}
       />
-      {errors.email?.type === "required" && (
-        <p role="alert">Email is required</p>
-      )}
-      {errors.email?.type === "pattern" && (
-        <p role="alert">It should be an email</p>
-      )}
+      <p>{errors.email?.message}</p>
       <label>Password</label>
       <input
         type="text"
         placeholder="Password"
         aria-invalid={errors.password ? "true" : "false"}
-        {...register("password", { required: true, minLength: 8 })}
+        {...register("password")}
       />
-      {errors.password?.type === "required" && (
-        <p role="alert">Password is required</p>
-      )}
-      {errors.password?.type === "minLength" && (
-        <p role="alert">Password should be at least 8 chars</p>
-      )}
+      <p>{errors.password?.message}</p>
       <button>Submit</button>
     </form>
   );
