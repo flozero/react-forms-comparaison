@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useEffect } from "react";
 // import { z } from "zod";
 import * as Yup from "yup";
 
@@ -19,6 +20,8 @@ type Inputs = {
 };
 
 const Basic = () => {
+  useEffect(() => console.log("Render times:"));
+
   const formik = useFormik<Inputs>({
     initialValues: {
       email: "",

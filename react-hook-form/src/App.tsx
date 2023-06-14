@@ -1,6 +1,7 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, useFormState } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useEffect } from "react";
 
 type Inputs = {
   email: string;
@@ -19,10 +20,14 @@ export default function App() {
     register,
     handleSubmit,
     formState: { errors },
+    control,
   } = useForm<Inputs>({
     resolver: zodResolver(schema),
   });
+
+  const { isSubmitting } = useFormState({ control });
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  useEffect(() => console.log("Render times:"));
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -46,7 +51,7 @@ export default function App() {
         {...register("password")}
       />
       <p role="alert">{errors.password?.message}</p>
-      <button>Submit</button>
+      <button disabled={isSubmitting}>Submit</button>
     </form>
   );
 }

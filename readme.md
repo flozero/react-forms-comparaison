@@ -66,6 +66,8 @@ Advanced features:
 
 Hard to validate performance. But the lib is providing a devtool extension to evaluate the performance of your forms. https://www.react-hook-form.com/dev-tools/
 
+the component are render when loading. But it doesnt re render on clicking nor typing or send
+
 #### Accessibility
 
 The library is providing some example with accessbility improvment in the form. It doesn't give you much more but its fine as it sounds better for the app to handle accessibliity the way they want. But appreciate the few examples.
@@ -95,8 +97,29 @@ Stats:
 
 Advanced features:
 
+- you can build your own inputs and connect them with functions from react hook form.
+
 #### Performance
+
+At no time the doc is speaking about performance. But looking at the useEffect:
+
+- It renders on the first load.
+- It render when clicking on an input
+- clicking anytime user is typing as many inputs as we have
+
+It looks like we can do some optimization but it requires more work as you need apparently to use something like FastField.
+Its not "performant" by default.
 
 #### Accessibility
 
+The components given by the lib like label doesn't provide enough props or override to handle properly accessiblity.
+You will have to use the later doc that showing the same way how react-hook-form is doing if you want to provide proper accessibility.
+
 #### Dev experience
+
+- The doc is first showing a bit incomprehensive examples and without following the "best usage". They show you that
+  you can use their components. But slowly move to a react-hook-form approach.
+
+Their examples don't start with typescript in mind nor speaking about performance
+
+Outside of communities effort there is not videos from their side.
